@@ -1,0 +1,23 @@
+{% extends 'admin.html' %}
+{% block title %} Employee {% endblock %}
+{% block content %}
+   <h2>Employee Page</h2>
+   <table class="table">
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ emp.name_of_employee }}</td>
+            </tr><tr>
+                <th>Phone</th>
+                <td>{{ emp.phoneNumber }}</td>
+            </tr><tr>
+                <th>Email</th>
+                <td>{{ emp.email }}</td>
+            </tr> <tr>
+                <th>Location</th>
+                <td>{{ emp.location }}</td> 
+            </tr>
+        </tbody>
+        </table>
+  {% endblock%}
+

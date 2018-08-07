@@ -1,0 +1,1 @@
+This was created to keep youths on their feet by connecting them with available jobs around them based on their level of experience on both the professional and vocational field of employments.  

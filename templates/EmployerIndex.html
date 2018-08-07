@@ -1,0 +1,40 @@
+{% extends 'admin.html' %}
+{% block title %} Employer {% endblock %}
+{% block content %}
+            <div class="card mb-3">
+                <div class="card-header bg-primary">Employer Form</div>
+                <div class="card-body">
+                <a href="create" class="btn btn-info">New Employer</a>
+       <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in emps %}
+    
+                <tr>
+                    <td>{{ row.name_of_employer }}</td>
+                    <td>{{ row.phoneNumber }}</td>
+                    <td>
+                        <a href="/employer/detail/{{ row.id }}" class="btn btn-primary">Detail</a>
+                        
+                        <a href="/employer/update/{{ row.id }}" class="btn btn-warning">
+                            <i class="fa fa-pencil"></i> Edit</a>
+                        
+                        <a href="/employer/delete/{{ row.id }}" class="btn btn-danger">
+                            <i class="fa fa-trash"></i> Delete</a>
+                    </td>
+                </tr>
+    
+                {% endfor %}
+            </tbody>
+                
+            </table>
+    </div></div>
+{% endblock %}
+    
+    

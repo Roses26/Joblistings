@@ -1,0 +1,17 @@
+
+{% extends 'admin.html' %}
+{% block title %} Employer {% endblock %}
+{% block content %}
+        <div class="container">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header">Employer Form</div>
+                <div class="card-body">
+                    <form method="POST">
+                        Did you want to delete {{ emp.name_of_employee }} ?
+
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+  {%endblock%}

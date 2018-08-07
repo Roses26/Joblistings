@@ -1,0 +1,52 @@
+{% extends 'admin.html' %}
+{% block title %} Jobs {% endblock %}
+{% block content %}
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-header">Job Form</div>
+            <div class="card-body">
+            <form method = 'post'>
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" name="title" value="{{ emp.title }}" 
+                            placeholder="Title of Job">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="location">Location</label>
+                        <input type="text" class="form-control" name="location"
+                        value="{{ emp.location }}" placeholder="location">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" value="{{ emp.email }}" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="phoneNumber">PhoneNumber</label>
+                        <input type="tel" class="form-control" name="phoneNumber" value="{{ emp.phoneNumber}}"  placeholder="Phone Number">
+                    </div>
+                </div>
+            
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="URL">URL</label>
+                        <input type="url" class="form-control" name="websiteURL" value="{{ emp.websiteURL }}"  placeholder="websiteURL">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="date">Published Date</label>
+                        <input type="text" class="form-control" name="publisheddate" value="{{ emp.publisheddate }}"  placeholder="Date">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="description">Description</label>  
+                        <textarea class="form-control" name="description" >{{ emp.description}}</textarea> 
+                    </div>
+                </div>
+                <button type="submit" name="submit" class="btn btn-success">Save Job</button>
+            </form>
+        </div>
+      </div>
+{% endblock %}

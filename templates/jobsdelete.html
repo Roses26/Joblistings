@@ -1,0 +1,15 @@
+{% extends 'admin.html' %}
+{% block title %} Job {% endblock %}
+{% block content %}
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header">Job Form</div>
+                <div class="card-body">
+                    <form method="POST">
+                        Did you want to delete {{ emp.title }} ?
+
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+   {% endblock%}
